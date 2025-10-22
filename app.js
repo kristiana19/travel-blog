@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = 3000;
+//const PORT = 3000;
 
 // View engine + static
 app.set("view engine", "ejs");
@@ -90,6 +90,5 @@ app.get("/posts/:id", (req, res) => {
 // 404 fallback (opciono)
 app.use((req, res) => res.status(404).send("Not found."));
 
-app.listen(PORT, () => {
-  console.log(`http://localhost:${PORT}`);
-});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on :${PORT}`));
