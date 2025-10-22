@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<head>
+    <link rel="icon" type="image/png" href="/images/love-icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Memories</title>
+</head>
+<body>
+      
+<main class="hero-wrap">
+  <section class="board edge-to-edge">
+    <!-- lijevi tekstualni blok -->
+    <div class="board__content">
+      <a href="/posts/new" class="board__kicker kicker-btn text-decoration-none">WRITE YOUR MEMORIES</a>
+      <h1 class="board__title">
+        A gentle reminder <span class="script">Board</span>
+      </h1>
+      <p class="board__desc">
+        A mindful travel board to hold your stories and reminders.
+        Collect postcards of your thoughts, paste a photo in words.
+        Remember: every trip changes you a little — and this is where those changes stay.
+      </p>
+    </div>
+
+    <!-- krugovi u pozadini -->
+    <div class="circle one"></div>
+    <div class="circle two"></div>
+    <div class="circle three"></div>
+
+    <!-- sticky papirići -->
+<% const positions = ["one","two","three","four","five"]; %>
+<% positions.forEach((pos, i) => { %>
+  <div class="sticky <%= pos %> <%= (pos==='two'||pos==='five')?'pink':'' %>">
+    <% if (top[i]) { %>
+      <a class="sticky__link" href="/posts/<%= top[i].id %>">
+        <strong><%= top[i].title %></strong>
+        <span><%= top[i].content %></span>
+      </a>
+    <% } else { %>
+      <small>Add Text</small>
+    <% } %>
+  </div>
+<% }) %>
+
+
+
+  </section>
+</main>
+
+
+    <%- include("partials/footer") %>
+
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // pokreni ulazna animacija
+    document.body.classList.add('is-ready');
+    // posle pop-in, uključi lebdenje
+    setTimeout(() => {
+      document.querySelectorAll('.sticky').forEach(el => el.classList.add('float'));
+    }, 800);
+  });
+  
+</script>
+
+</body>
+</html>
