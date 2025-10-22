@@ -9,7 +9,7 @@ A travel-inspired blog app where you can write, collect your memories.
 
 ## 🧩 Tech Stack
 
-| Technology |
+| Technology | Purpose |
 |-------------|----------|
 | **Node.js + Express** | Backend server and routing |
 | **EJS** | Template rendering |
