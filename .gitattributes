@@ -1,0 +1,4 @@
+*.ejs linguist-language=JavaScript
+*.css linguist-language=Ignore
+*.html linguist-language=JavaScript
+*.js linguist-language=JavaScript

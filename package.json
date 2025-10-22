@@ -1,19 +1,20 @@
 {
   "name": "travel-blog",
   "version": "1.0.0",
-  "type": "module",
+  "description": "A mindful travel blog app built with Node.js, Express, and EJS.",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
+  "keywords": ["nodejs", "express", "ejs", "travel", "blog", "render", "minimalist"],
+  "author": "Kristijana",
+  "license": "MIT",
   "dependencies": {
-    "ejs": "^3.1.9",
     "express": "^4.19.2",
-    "express-session": "^1.17.3",
-    "method-override": "^3.0.0"
+    "ejs": "^3.1.9"
   },
-  "engines": {
-    "node": ">=18.x"
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
